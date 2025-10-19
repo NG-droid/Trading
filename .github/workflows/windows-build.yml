@@ -23,14 +23,17 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
-      - name: Build exe (PyInstaller)
+      - name: Build exe (PyInstaller – DEBUG)
         shell: bash
         run: |
-          pyinstaller --noconfirm --onefile --windowed \
-            --name TradingApp \
+          pyinstaller --noconfirm --onefile --console \
+            --name TradingApp-debug \
             --add-data "data;data" \
             --add-data "test_offline.db;." \
             --add-data "test_portfolio.db;." \
+            --collect-all pandas \
+            --collect-all tzdata \
+            --collect-all matplotlib \
             run_app.py
 
       - name: Upload artifact
