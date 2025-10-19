@@ -26,10 +26,11 @@ jobs:
       - name: Build exe (PyInstaller)
         shell: bash
         run: |
-          # Choisis ton point d'entrée : run_app.py (par défaut ici)
-          # Si tu préfères l'UI Tkinter, remplace par run_app_tkinter.py
           pyinstaller --noconfirm --onefile --windowed \
             --name TradingApp \
+            --add-data "data;data" \
+            --add-data "test_offline.db;." \
+            --add-data "test_portfolio.db;." \
             run_app.py
 
       - name: Upload artifact
