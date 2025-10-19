@@ -1,0 +1,39 @@
+name: Build Windows EXE
+
+on:
+  push: { branches: [ main ] }
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build exe (PyInstaller)
+        shell: bash
+        run: |
+          # Choisis ton point d'entrée : run_app.py (par défaut ici)
+          # Si tu préfères l'UI Tkinter, remplace par run_app_tkinter.py
+          pyinstaller --noconfirm --onefile --windowed \
+            --name TradingApp \
+            run_app.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TradingApp-windows
+          path: dist/**
