@@ -1,0 +1,78 @@
+═══════════════════════════════════════════════════════════════
+  ✅ INSTALLATION TERMINÉE - Portfolio Manager
+═══════════════════════════════════════════════════════════════
+
+📦 Ce qui a été installé :
+
+✅ Python 3.12.12 (via Homebrew)
+✅ Tkinter 9.0 (pour l'interface graphique)
+✅ Environnement virtuel Python (dossier venv/)
+✅ CustomTkinter 5.2.2 (interface graphique moderne)
+✅ yfinance 0.2.66 (données de marché)
+✅ openpyxl 3.1.5 (export Excel)
+✅ pillow 12.0.0 (gestion images)
+✅ Toutes les dépendances nécessaires
+
+═══════════════════════════════════════════════════════════════
+  🚀 COMMENT LANCER L'APPLICATION
+═══════════════════════════════════════════════════════════════
+
+Option 1 : Interface Graphique (GUI) - Recommandé ✨
+────────────────────────────────────────────────────
+  $ cd /Users/guichardnicolas/Trading
+  $ ./run_app_gui.sh
+
+  Une fenêtre moderne s'ouvrira avec :
+  - Dashboard avec métriques
+  - Top 5 positions
+  - Navigation par onglets
+  - Thème Dark/Light
+
+Option 2 : Interface Ligne de Commande (CLI)
+────────────────────────────────────────────
+  $ cd /Users/guichardnicolas/Trading
+  $ python3 run_cli.py
+
+  Menu interactif dans le Terminal avec toutes les fonctionnalités
+
+═══════════════════════════════════════════════════════════════
+  📁 FICHIERS CRÉÉS
+═══════════════════════════════════════════════════════════════
+
+✅ venv/                    - Environnement virtuel Python 3.12
+✅ run_app_gui.sh           - Script de lancement GUI (Mac)
+✅ run_cli.py               - Interface ligne de commande
+✅ INSTALLATION.md          - Guide d'installation détaillé
+✅ LANCER_APP.md            - Instructions de lancement (mis à jour)
+✅ README_DEV.md            - Guide de développement
+
+═══════════════════════════════════════════════════════════════
+  🎯 PROCHAINES ÉTAPES
+═══════════════════════════════════════════════════════════════
+
+1. Tester la GUI :
+   $ ./run_app_gui.sh
+
+2. Explorer les fonctionnalités :
+   - Voir le Dashboard
+   - Ajouter des transactions
+   - Consulter les positions
+   - Calculer la performance
+
+3. Développement :
+   - Ajouter les graphiques (Plotly/Matplotlib)
+   - Implémenter l'export Excel complet
+   - Compléter les onglets GUI
+
+═══════════════════════════════════════════════════════════════
+  💡 RAPPELS IMPORTANTS
+═══════════════════════════════════════════════════════════════
+
+▶ Pour la GUI sur Mac : Utiliser ./run_app_gui.sh
+▶ Pour la CLI : Utiliser python3 run_cli.py (pas besoin de venv)
+▶ Les erreurs Yahoo Finance sont normales (problème réseau)
+▶ L'app fonctionne avec les données en base de données
+
+═══════════════════════════════════════════════════════════════
+
+Bon trading ! 📊💰
